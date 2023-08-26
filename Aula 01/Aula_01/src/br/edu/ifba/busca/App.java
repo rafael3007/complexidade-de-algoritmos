@@ -8,7 +8,7 @@ import br.edu.ifba.busca.impl.NumberImpl;
 
 public class App {
     private static final int NUMEROS_NO_VETOR = 1000;
-    private static final int NUMERO_DE_PROCURADO = 27;
+    private static final int NUMERO_DE_PROCURADO = 2;
 
     public static Numbers criarGeradorDeNumeros() {
         return new NumberImpl();
