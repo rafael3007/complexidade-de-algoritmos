@@ -1,4 +1,4 @@
-package br.edu.ifba.models;
+package br.edu.ifba.biometria.cenario1.models;
 
 import java.util.ArrayList;
 import java.util.List;

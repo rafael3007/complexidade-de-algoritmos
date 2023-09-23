@@ -1,4 +1,4 @@
-package br.edu.ifba.models;
+package br.edu.ifba.biometria.cenario1.models;
 
 public class Biometria {
     private int batimentos = 0;
