@@ -3,6 +3,7 @@ package br.edu.ifba.biometria.cenario2.models;
 import java.util.ArrayList;
 import java.util.List;
 
+// constante, O(1)
 public class Paciente implements Comparable<Paciente> {
 
     private String id = "";
@@ -10,27 +11,6 @@ public class Paciente implements Comparable<Paciente> {
 
     private List<Biometria> leituras = new ArrayList<>();
     private Biometria ultimaLeitura = null;
-
-    public Paciente(List<Biometria> leituras, Biometria ultimaLeitura) {
-        this.leituras = leituras;
-        this.ultimaLeitura = ultimaLeitura;
-    }
-
-    public List<Biometria> getLeituras() {
-        return leituras;
-    }
-
-    public void setLeituras(List<Biometria> leituras) {
-        this.leituras = leituras;
-    }
-
-    public Biometria getUltimaLeitura() {
-        return ultimaLeitura;
-    }
-
-    public void setUltimaLeitura(Biometria ultimaLeitura) {
-        this.ultimaLeitura = ultimaLeitura;
-    }
 
     public Paciente(String id, String nome) {
         this.id = id;
@@ -53,22 +33,30 @@ public class Paciente implements Comparable<Paciente> {
         this.nome = nome;
     }
 
-    /**
-     * Metodo para printar
-     */
-    @Override
-    public int compareTo(Paciente outroPaciente) {
-        return id.compareTo(outroPaciente.getId());
+    public List<Biometria> getLeituras() {
+        return leituras;
     }
 
-    /**
-     * metodo para comparação de leituras
-     * 
-     * @param leitura
-     */
+    public void setLeituras(List<Biometria> leituras) {
+        this.leituras = leituras;
+    }
+
+    public Biometria getUltimaLeitura() {
+        return ultimaLeitura;
+    }
+
+    public void setUltimaLeitura(Biometria ultimaLeitura) {
+        this.ultimaLeitura = ultimaLeitura;
+    }
+
     public void onLeitura(Biometria leitura) {
         this.leituras.add(leitura);
         this.ultimaLeitura = leitura;
+    }
+
+    @Override
+    public int compareTo(Paciente outroPaciente) {
+        return id.compareTo(outroPaciente.getId());
     }
 
 }

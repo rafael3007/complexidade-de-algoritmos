@@ -10,7 +10,7 @@ public abstract class Executor implements Runnable {
         this.totalDeLeituras = totalDeLeituras;
     }
 
-    // complexinade O(n) linear
+    // linear, O(N)
     @Override
     public void run() {
         Random randomizador = new Random();

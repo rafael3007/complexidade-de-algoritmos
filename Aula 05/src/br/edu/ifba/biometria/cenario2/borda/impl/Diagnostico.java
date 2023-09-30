@@ -1,9 +1,9 @@
-package br.edu.ifba.biometria.cenario2.nuvem.impl;
+package br.edu.ifba.biometria.cenario2.borda.impl;
 
 import java.util.List;
 
-import br.edu.ifba.biometria.cenario1.models.Biometria;
-import br.edu.ifba.biometria.cenario1.nuvem.atuador.Atuador;
+import br.edu.ifba.biometria.cenario2.borda.atuador.Atuador;
+import br.edu.ifba.biometria.cenario2.models.Biometria;
 
 public class Diagnostico implements Atuador<Biometria, String> {
 
@@ -13,7 +13,7 @@ public class Diagnostico implements Atuador<Biometria, String> {
     private static final int LIMITE_ATE_HIPERTERMIA = 38;
     private static final int LIMITE_ATE_HIPOTERMIA = 27;
 
-    // O(n) complexidade linear
+    // linear, O(N)
     @Override
     public String atuar(List<Biometria> leituras) {
         String diagnostico = "";

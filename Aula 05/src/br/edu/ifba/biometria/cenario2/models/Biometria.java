@@ -1,8 +1,12 @@
 package br.edu.ifba.biometria.cenario2.models;
 
+// constante, O(1)
 public class Biometria {
     private int batimentos = 0;
     private int temperatura = 0;
+
+    private String diagnostico = "";
+    private int totalDePadroes = 0;
 
     public Biometria(int batimentos, int temperatura) {
         this.batimentos = batimentos;
@@ -25,8 +29,25 @@ public class Biometria {
         this.temperatura = temperatura;
     }
 
+    public String getDiagnostico() {
+        return diagnostico;
+    }
+
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
+    }
+
+    public int getTotalDePadroes() {
+        return totalDePadroes;
+    }
+
+    public void setTotalDePadroes(int totalDePadroes) {
+        this.totalDePadroes = totalDePadroes;
+    }
+
     @Override
     public String toString() {
-        return "Temperatura: " + temperatura + ", batimentos: " + batimentos;
+        return "temperatura: " + temperatura + ", batimentos: " + batimentos;
     }
+
 }
