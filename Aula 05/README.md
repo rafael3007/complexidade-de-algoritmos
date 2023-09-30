@@ -4,4 +4,4 @@
 ## Parte II
     
 
-complexidade
+complexidade é a quantidade de trabalho necessária para a execução de algorimos expressa em função das suas operações
