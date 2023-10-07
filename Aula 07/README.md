@@ -10,5 +10,9 @@
     V = nó
 
     CC <= 10 é um valor OK
+
 ```
 
+
+## Grafos
+    Conjunto de vertices ou nós e um conjunto de arestas ( similar a Complexidade ciclomática )
